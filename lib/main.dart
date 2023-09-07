@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return MaterialApp(
+      // untuk tidak ada tulisan debug 
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.cyan,
