@@ -1,19 +1,49 @@
-part of 'pages.dart';
+import 'package:flutter_application_1/pages/pages.dart';
+import 'package:flutter_application_1/shared/shared.dart';
+import 'package:flutter/material.dart';  
 
-class WellcomePage extends StatelessWidget {
-  const WellcomePage({Key? key}) : super(key: key);
+        class DetailPage extends StatelessWidget {
+          
+          //constructor
 
-  @override
+        //   @override
+        //   Widget build(BuildContext context) {
+        //     return Scaffold(
+        //       appBar: AppBar(
+        //         title: Text("Detail Page"),
+        //       ),
+        //       body: Center(
+        //         child: Column(
+        //           mainAxisAlignment: MainAxisAlignment.center,
+        //           children: [
+        //             //menampilkan title yang dikirm
+
+        //             ElevatedButton(
+        //               //Navigator.pop() digunakan untuk kembali ke halaman sebelumnya
+        //               onPressed: (){
+        //                 Navigator.pop(context);
+        //               }, 
+        //               child: Text("Kembali"),
+        //             )
+        //           ],
+        //         ),
+        //       ),
+        //     );
+        //   }
+        // }
+
+
+
+        @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryColor,
       body: 
       // 1. Local image
 Container(
   width: double.infinity,
   decoration: const BoxDecoration(
     image: DecorationImage(
-        image: AssetImage("assets/images/wallpaper.png"),
+        image: AssetImage("assets/images/wallpaper2.png"),
         fit: BoxFit.cover),
   ),
   child: SafeArea(
@@ -22,20 +52,21 @@ Container(
           padding: const EdgeInsets.only(top: 70.0),
           
           children: [
-            Text(
-              "WELCOME",
+
+            Padding(
+                padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+                child: Container(
+                  child: Image.asset('assets/images/splashscreen2.png',
+                      height: 320, width: 289),
+                )),
+                            Text(
+              "Welcome member My UHB",
               style: whiteTextStyle.copyWith(
-                  fontSize: 36,
+                  fontSize: 20,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'Open Sans'),
               textAlign: TextAlign.center,
             ),
-            Padding(
-                padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
-                child: Container(
-                  child: Image.asset('assets/images/uhb.png',
-                      height: 320, width: 289),
-                )),
             SizedBox(
               height: 15,
             ),
@@ -45,7 +76,7 @@ Container(
             Padding(
               padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Text(
-                'When you face change, \n believe that someone will \n always help.',
+                'Education is the passport for the future,\nbecause tomorrow belongs to those who\nprepare for it today.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -98,7 +129,7 @@ Text.rich(
                     context,
                     // DetailPage adalah halaman yang dituju 
                     MaterialPageRoute(
-                      builder: (context) => DetailPage(
+                      builder: (context) => WellcomePage(
 
                       )
                     ),
