@@ -1,8 +1,9 @@
 import 'package:flutter_application_1/pages/pages.dart';
+import 'package:flutter_application_1/pages/signin.dart';
 import 'package:flutter_application_1/shared/shared.dart';
 import 'package:flutter/material.dart';  
 
-        class DetailPage extends StatelessWidget {
+        class splashscreen2 extends StatelessWidget {
           
           //constructor
 
@@ -49,7 +50,7 @@ Container(
   child: SafeArea(
         bottom: false,
         child: ListView(
-          padding: const EdgeInsets.only(top: 70.0),
+          padding: const EdgeInsets.only(top: 10.0),
           
           children: [
 
@@ -62,8 +63,8 @@ Container(
                             Text(
               "Welcome member My UHB",
               style: whiteTextStyle.copyWith(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w800,
                   fontFamily: 'Open Sans'),
               textAlign: TextAlign.center,
             ),
@@ -74,21 +75,21 @@ Container(
               height: 15,
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+              padding: EdgeInsets.fromLTRB(30, 10, 0, 0),
               child: Text(
                 'Education is the passport for the future,\nbecause tomorrow belongs to those who\nprepare for it today.',
-                textAlign: TextAlign.center,
+                // textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontFamily: 'Open Sans',
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),
-            // SizedBox(
-            //   height: 30,
-            // ),
+            SizedBox(
+              height: 80,
+            ),
 // Text(
 //                 '...',
 //                 textAlign: TextAlign.center,
@@ -114,9 +115,9 @@ Container(
 Text.rich(
   TextSpan(
     children: [
-      TextSpan(text: '      .',  style: TextStyle(fontSize: 100,  color: Colors.white)),
+      TextSpan(text: '              .',  style: TextStyle(fontSize: 50,  color: Colors.white)),
       TextSpan(text: '  .', style: TextStyle(fontSize: 50,  color: Colors.white)),
-      TextSpan(text: '  .', style: TextStyle(fontSize: 50,  color: Colors.white)),
+      TextSpan(text: ' .', style: TextStyle(fontSize: 100,  color: Colors.white)),
     ],
   ),
 ),
@@ -129,7 +130,7 @@ Text.rich(
                     context,
                     // DetailPage adalah halaman yang dituju 
                     MaterialPageRoute(
-                      builder: (context) => WellcomePage(
+                      builder: (context) => Signin(
 
                       )
                     ),

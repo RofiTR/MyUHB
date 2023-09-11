@@ -98,7 +98,7 @@ Text.rich(
                     context,
                     // DetailPage adalah halaman yang dituju 
                     MaterialPageRoute(
-                      builder: (context) => DetailPage(
+                      builder: (context) => splashscreen2(
 
                       )
                     ),
