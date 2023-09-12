@@ -1,3 +1,4 @@
+import 'package:flutter_application_1/pages/dashboard.dart';
 import 'package:flutter_application_1/pages/pages.dart';
 import 'package:flutter_application_1/shared/shared.dart';
 import 'package:flutter_application_1/pages/spalshscreen2.dart';
@@ -206,7 +207,7 @@ class Signin extends StatelessWidget {
                 Navigator.push(
                   context,
                   // DetailPage adalah halaman yang dituju
-                  MaterialPageRoute(builder: (context) => Signin()),
+                  MaterialPageRoute(builder: (context) => dashboard()),
                 );
               },
               child: Container(
